@@ -15,8 +15,8 @@ interface ProjectcardProps {
 
 const Projectcard: React.FC<ProjectcardProps> = ({ index, companyName, projects, logo }) => {
     return (
-        <section className='w-full h-max  flex flex-col items-center justify-center  flex-wrap'>
-            <div className='w-[90%] xl:w-[90%] lg:w-[90%] md:w-[95%] sm:w-[95%] h-[90%]  flex flex-col  rounded-lg shadow-lg  flex-wrap py-6'>
+        <section className='w-full h-max  flex items-center justify-center  flex-wrap'>
+            <div className='w-[90%] xl:w-[100%] lg:w-[90%] md:w-[95%] sm:w-[95%] h-[90%]  flex flex-col  rounded-lg shadow-lg  flex-wrap py-6'>
                 <div key={index} className="w-full h-full flex flex-col space-y-2 " >
                     <div className='w-full h-[100px]  flex items-center justify-center'>
                         <div className='w-[40%] xl:w-[30%] lg:w-[28%] md:w-[25%] sm:w-[25%] h-[50%] xl:h-[80%] lg:h-[70%] md:h-[60%] sm:h-[60%] relative max-h-[80%]'>
@@ -29,7 +29,7 @@ const Projectcard: React.FC<ProjectcardProps> = ({ index, companyName, projects,
                         </div>
                     </div>
 
-                    <div className="h-max  grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 lg:grid-cols-3  p-4 ">
+                    <div className="h-max  grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3  p-4 ">
                         {projects.map((project, id) => (
                             <div
                                 key={id}

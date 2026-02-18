@@ -8,11 +8,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Wahat Liwan Technical Services L.L.C",
+  title: "AMWAJ AL NOOR",
   description:
     "Credible, committed, and cost-efficient electro-mechanical solutions delivered by expert engineers across UAE.",
   keywords: [
-    "Wahat Liwan",
+    "AMWAJ AL NOOR",
     "wahat groups",
     "wahat",
     "MEP services UAE",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "man power supply in uae",
     "HVAC, plumbing, electrical",
   ],
-  authors: [{ name: "Wahat Liwan Technical Team", url: "https://wahatliwan.com" }],
-  creator: "Wahat Liwan Technical Services",
-  publisher: "Wahat Liwan Technical Services",
+  authors: [{ name: "AMWAJ AL NOOR Technical Team", url: "https://wahatliwan.com" }],
+  creator: "AMWAJ AL NOOR Technical Services",
+  publisher: "AMWAJ AL NOOR Technical Services",
   metadataBase: new URL("https://wahatliwan.com"),
   robots: {
     index: true,
@@ -31,17 +31,17 @@ export const metadata: Metadata = {
     nocache: false,
   },
   openGraph: {
-    title: "Wahat Liwan Technical Services L.L.C",
+    title: "AMWAJ AL NOOR Technical Services L.L.C",
     description:
       "Trusted partner for high-quality electro-mechanical contracting and technical services in UAE.",
     url: "https://wahatliwan.com",
-    siteName: "Wahat Liwan",
+    siteName: "AMWAJ AL NOOR",
     images: [
       {
         url: "https://wahatliwan.com/images/og-banner.png",
         width: 1200,
         height: 630,
-        alt: "Wahat Liwan Technical Services Banner",
+        alt: "AMWAJ AL NOOR Technical Services Banner",
       },
     ],
     locale: "en_US",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wahat Liwan Technical Services",
+    title: "AMWAJ AL NOOR Technical Services",
     description:
       "Delivering excellence in electro-mechanical contracting across UAE.",
     images: ["https://wahatliwan.com/images/og-banner.png"],
@@ -79,7 +79,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Header />
           {children}
-        <div className="py-10">
+        <div className="">
           <ClientSection />
         </div>
         <Footer />

@@ -15,16 +15,16 @@ const Header: React.FC = () => {
     const handleResize = () => {
       const mobile = window.innerWidth < 642;
       setIsMobile(mobile);
-      setIsNavVisible(!mobile); 
-      setMenuButton(mobile);    
+      setIsNavVisible(!mobile);
+      setMenuButton(mobile);
     };
-  
-    handleResize(); 
+
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
-    
+
+
   const [closeBtn, setCloseBtn] = useState(false);
   const [menuButton, setMenuButton] = useState(false);
   const [slideText, setSlideText] = useState("");
@@ -58,33 +58,31 @@ const Header: React.FC = () => {
   }, []);
 
   const closeNavOnClick = () => {
-    if(closeBtn){
+    if (closeBtn) {
       closeNav();
     }
   };
-  
+
 
   return (
-    <header className="w-full h-[120px] xl:h-[120px] lg:h-[120px] md:h-[120px] sm:h-[90px]  flex justify-between items-center bg-transparent absolute left-0 top-0 z-50 text-white ">
-      <div className="w-[80%] xl:w-[35%] lg:w-[40%] md:w-[35%] sm:w-[32%] h-[90%] flex items-center justify-start  z-100 ">
-        <div className="w-[30%]  h-[140px] xl:w-[35%] lg:w-[30%] md:w-[30%] sm:w-[30%]  slide-right">
-          <Link href="/" className="w-full h-[100%]  flex items-center justify-center mt-2  xl:mt-3 xl:ml-5 lg:mt-2 lg:ml-2 md:ml-1 md:mt-0 sm:ml-1 ">
-            <div className="relative w-[90%] h-[50%] xl:w-[90%] xl:h-[90%] lg:w-[100%] lg:h-[80%] md:w-[100%] md:h-[60%] sm:w-full sm:h-[50%]">
-              <Image src="/images/logo.png" alt="Company Logo" fill className="object-fill" />
-            </div>
-          </Link>
-        </div>
-        <div className='slide-right h-[80%]  w-[90%] xl:w-[65%] lg:w-[75%] md:w-[75%] sm:w-[70%]   flex items-center justify-start'>
-          <Link href={"/"}>
-            <div className='w-full xl:space-y-2 lg:space-y-2 md:space-y-1 sm:space-y-1'>
-              <h1 className='w-full h-[32px] xl:h-[38px] lg:h-[32px] md:h-[25px] sm:h-[20px] text-[24px] xl:text-[38px] lg:text-[32px] md:text-[25px] sm:text-[18px] font-bold'><span className="bg-gradient-to-r from-green-500 via-green-00 to-green-600  bg-clip-text text-transparent ">
-                WAHAT LIWAN
+    <header className="w-full h-[100px]  xl:h-[75px] lg:h-[120px] md:h-[120px] sm:h-[90px]  flex justify-between items-center bg-white left-0 top-0 z-50 text-black ">
+      <div className="w-[80%] xl:w-[38%] lg:w-[40%] md:w-[35%] sm:w-[32%] h-[95%] flex items-center justify-start  z-100 ">
+        <div className='slide-right h-[100%]  w-[90%] xl:w-[80%] lg:w-[75%] md:w-[75%] sm:w-[70%]   flex items-center justify-start'>
+          <Link href={"/"} className="w-full h-full flex items-end">
+              <div className="w-1/3 h-full flex items-end justify-center">
+                <div className=" w-[90%] h-[95%]  relative">
+                  <Image src={"/images/companyLogo3.png"} alt="logo" fill className='object-cover' />
+                </div>
+              </div>
+              <div className="w-3/4 h-[90%] flex flex-col">
+              <h1 className='w-full h-[32px] xl:h-[38px] lg:h-[32px] md:h-[25px] sm:h-[20px] text-[24px] xl:text-[35px] lg:text-[32px] md:text-[25px] sm:text-[18px] font-extrabold leading-tight'><span className="bg-gradient-to-r from-orange-500 via-orange-500 to-red-600  bg-clip-text text-transparent ">
+                ALWAJ AL NOOR
               </span></h1>
-              <h2 className='w-full text-left  xl:pl-[50px] lg:pl-[90px] md:pl-[52px] sm:pl-[48px] xl:text-[17px] 
+              <h2 className='w-full text-left  xl:pl-[90px] lg:pl-[90px] md:pl-[52px] sm:pl-[48px] xl:text-[15px] 
                   lg:text-[10px] md:text-[9px] sm:text-[6px] text-[9px] font-bold '><span className="bg-gradient-to-r from-gray-400  to-gray-400 bg-clip-text text-transparent ">
                   TECHNICAL SERVICES L.L.C
                 </span></h2>
-            </div>
+                </div>
           </Link>
         </div>
       </div>
@@ -108,29 +106,29 @@ const Header: React.FC = () => {
             </div>
           )}
 
-          <ul className="navbar w-full h-full flex justify-end  items-center  space-x-0 xl:space-x-16 lg:space-x-8 md:space-x-4 sm:space-x-3 text-white font-semibold xl:text-[13px] lg:text-[12px] md:text-[10px] sm:text-[11px]">
+          <ul className="navbar w-[90%] h-full flex justify-end  items-center  space-x-0 xl:space-x-16 lg:space-x-8 md:space-x-4 sm:space-x-3 text-white font-semibold xl:text-[13px] lg:text-[12px] md:text-[10px] sm:text-[11px]">
             <li
               className={`h-full flex justify-center items-center  ${pathname === "/"
-                  ? "text-green-300 underline underline-offset-[12px]"
-                  : ""
+                ? "text-orange-600 underline underline-offset-[12px]"
+                : "text-black"
                 }`}
             >
-              <Link href="/" className="hover:underline hover:underline-offset-[12px] hover:text-green-400" onClick={closeNavOnClick}>HOME</Link>
+              <Link href="/" className="hover:underline hover:underline-offset-[12px] hover:text-orange-600" onClick={closeNavOnClick}>HOME</Link>
             </li>
 
             <li
               className={`h-full flex justify-center items-center  ${pathname === "/about-us"
-                  ? "text-green-300 underline underline-offset-[12px]"
-                  : "" 
+                ? "text-orange-600 underline underline-offset-[12px]"
+                : "text-black"
                 }`}
             >
-              <Link href="/about-us" className="hover:underline hover:underline-offset-[12px] hover:text-green-400" onClick={closeNavOnClick}>ABOUT US</Link>
+              <Link href="/about-us" className="hover:underline hover:underline-offset-[12px] hover:text-orange-600" onClick={closeNavOnClick}>ABOUT US</Link>
             </li>
 
             <li
               className={`h-full flex justify-center items-center ${pathname === "/ongoing-projects" || pathname === "/completed-projects"
-              ? "text-green-300 underline underline-offset-[12px]"
-              : ""}
+                ? "text-orange-600 underline underline-offset-[12px]"
+                : "text-black"}
             `}
               onMouseLeave={() => setViewProjects(false)}
             >
@@ -139,7 +137,7 @@ const Header: React.FC = () => {
                 onMouseEnter={() => setViewProjects(true)}
                 onClick={() => setViewProjects(!viewProjects)}
               >
-                <button className="mr-0 pr-2 hover:underline hover:underline-offset-[12px] hover:text-green-400" >PROJECTS</button>
+                <button className="mr-0 pr-2 hover:underline hover:underline-offset-[12px] hover:text-orange-600" >PROJECTS</button>
                 <i
                   className={viewProjects ? "bx bx-chevron-up" : "bx bx-chevron-down"}
                 ></i>
@@ -154,11 +152,11 @@ const Header: React.FC = () => {
 
             <li
               className={`h-full flex justify-center items-center  ${pathname === "/services"
-                  ? "text-green-300 underline underline-offset-[12px]"
-                  : ""
+                ? "text-orange-600 underline underline-offset-[12px]"
+                : "text-black"
                 }`}
             >
-              <Link href="/services" className="hover:underline hover:underline-offset-[12px] hover:text-green-400" onClick={closeNavOnClick}>SERVICES</Link>
+              <Link href="/services" className="hover:underline hover:underline-offset-[12px] hover:text-orange-600" onClick={closeNavOnClick}>SERVICES</Link>
             </li>
 
             <li
@@ -170,9 +168,8 @@ const Header: React.FC = () => {
                 onMouseEnter={() => setMoreDetails(true)}
                 onClick={() => setMoreDetails(!moreDetails)}
               >
-                <button className={`mr-0 pr-2 hover:underline hover:underline-offset-[12px] hover:text-green-400 ${
-                  pathname==="/pre-cast" || pathname==="/profile" ? "text-green-300 underline underline-offset-[12px]":""
-                }`}>MORE</button>
+                <button className={`mr-0 pr-2 hover:underline hover:underline-offset-[12px] hover:text-orange-600 ${pathname === "/pre-cast" || pathname === "/profile" ? "text-orange-600 underline underline-offset-[12px]" : "text-black"
+                  }`}>MORE</button>
                 <i
                   className={moreDetails ? "bx bx-chevron-up" : "bx bx-chevron-down"}
                 ></i>
@@ -185,10 +182,14 @@ const Header: React.FC = () => {
                 )}
               </div>
             </li>
-
-            <button className="w-[150px] xl:w-[160px] lg:w-[160px] md:w-[120px] sm:w-[110px] p-2 px-6 rounded-2xl flex justify-center items-center text-black bg-green-500 font-bold">
-              <Link href="/contact-us" onClick={closeNavOnClick}>GET IN TOUCH</Link>
-            </button>
+            <li
+              className={`h-full flex justify-center items-center  ${pathname === "/services"
+                ? "text-orange-600 underline underline-offset-[12px]"
+                : "text-black"
+                }`}
+            >
+              <Link href="/contact-us" className="hover:underline hover:underline-offset-[12px] hover:text-orange-600" onClick={closeNavOnClick}>CONTACT US</Link>
+            </li>
           </ul>
         </nav>
       )}

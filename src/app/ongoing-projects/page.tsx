@@ -1,50 +1,91 @@
 'use client';
 
-import React, { useRef } from 'react';
-import Image from 'next/image';
-import { ongoingProjects } from '../export';
+import React, { useState, useMemo } from 'react';
+import { ongoingProjects } from "../export";
 import Projectcard from '../components/projectcard';
 
+const OngoingProjectsBoard: React.FC = () => {
+    const [activeCompany, setActiveCompany] = useState<number | null>(0);
 
-const OngoingProjects: React.FC = () => {
-  const projectsRef = useRef<HTMLDivElement>(null);
+    const totalProjects = useMemo(() => {
+        return ongoingProjects.reduce(
+            (count, group) => count + group.projects.length,
+            0
+        );
+    }, []);
 
+    return (
+        <section className="min-h-screen bg-gradient-to-br from-orange-900 via-orange-800 to-red text-white px-4 sm:px-8 lg:px-14 py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-  return (
-    <div className="w-full   bg-white">
-      <div className="w-full h-[300px] xl:h-screen lg:h-screen md:h-[620px] sm:h-[500px]   relative ">
-        <Image src="/images/ongoingprojects-banner.png" alt={"pic"} fill className="object-cover xl:object-fill lg:object-cover md:object-fill sm:object-cover" />
-        <div className="w-full h-full absolute left-0 top-0 bg-gray-900 opacity-60 "></div>
-        <div className='xl:w-[40%] lg:w-[41%] md:w-[50%] sm:w-[50%] h-max absolute top-[25%] xl:left-1/14 xl:top-[40%] lg:left-1/8 lg:top-[40%] md:left-1/8  md:top-[50%] sm:left-1/9 sm:top-[50%] text-white  text-left p-2 width75 banner_content '>
-          <h1 className='w-max xl:text-[24px] lg:text-[22px] md:text-[18px] sm:text-[14px] tracking-wider font-semibold slide-left welcomeText border p-2 rounded-2xl'>Ongoing projects</h1>
-          <div className='slide-right h-max '>
-            <div className='w-max space-y-0 xl:space-y2 lg:space-y-2 md:space-1.5 sm:space-y-1'>
-              <h1 className='xl:h-[75px] lg:h-[60px] md:h-[50px] sm:h-[45px]  xl:text-[50px] lg:text-[42px] md:text-[36px] sm:text-[30px] font-bold titleText height22'><span className="bg-gradient-to-r from-green-500 via-green-00 to-gray-300  bg-clip-text text-transparent titleHeight">
-                What we are doing
-              </span></h1>
+                {/* LEFT – STATS PANEL */}
+                <aside className="lg:col-span-1 bg-gray-800/60 backdrop-blur rounded-2xl p-6 sticky top-6 h-fit">
+                    <h2 className="text-xl font-semibold mb-6">Project Overview</h2>
+
+                    <div className="space-y-4">
+                        <div className="p-4 bg-gray-700/50 rounded-xl">
+                            <p className="text-sm text-gray-400">Total Projects</p>
+                            <p className="text-3xl font-bold text-blue-400">
+                                {totalProjects}
+                            </p>
+                        </div>
+
+                        <div className="p-4 bg-gray-700/50 rounded-xl">
+                            <p className="text-sm text-gray-400">Client Groups</p>
+                            <p className="text-3xl font-bold text-emerald-400">
+                                {ongoingProjects.length}
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+
+                {/* RIGHT – PROJECT BOARD */}
+                <div className="lg:col-span-3 space-y-6">
+                    {ongoingProjects.map((group, index) => (
+                        <div
+                            key={index}
+                            className="bg-gray-800/60 backdrop-blur rounded-2xl overflow-hidden"
+                        >
+                            {/* COMPANY HEADER */}
+                            <button
+                                onClick={() =>
+                                    setActiveCompany(
+                                        activeCompany === index ? null : index
+                                    )
+                                }
+                                className="w-full flex items-center justify-between px-6 py-5 hover:bg-gray-700/40 transition cursor-pointer"
+                            >
+                                <div>
+                                    <h3 className="text-lg font-semibold">
+                                        {group.company}
+                                    </h3>
+                                    {/* <p className="text-sm text-gray-400">
+                                        {group.projects.length} active projects
+                                    </p> */}
+                                </div>
+
+                                <span className="text-sm text-blue-400">
+                                    {activeCompany === index ? 'Hide' : 'View'}
+                                </span>
+                            </button>
+
+                            {/* PROJECT LIST */}
+                            {activeCompany === index && (
+                                <div className="px-6 pb-6 space-y-4">
+                                    <Projectcard
+                                        index={index}
+                                        companyName={group.company}
+                                        projects={group.projects}
+                                        logo={group.logo}
+                                    />
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
             </div>
-          </div>
-          <div className='w-full h-max bg-black/10 backdrop-blur-[4px] p-3 pl-1 rounded-md  xl:text-[14px] lg:text-[13px] md:text-[12px] sm:text-[10px] paragraph text-gray-100 pt-2 slide-down '>
-            <p className='leading-[13px] xl:leading-[23px] lg:leading-[22px] md:leading-[18px] sm:leading-[16px] tracking-wide  p8'>At Wahat Liwan Technical Services LLC, we offer a comprehensive range of electro-mechanical services designed to meet the demands of complex, large-scale projects. Our expertise spans across industries, delivering solutions that are efficient, reliable, and tailored to each client’s unique requirements....
-            </p>
-          </div>
-          <div className='w-full'>
-            <button className="xl:text-[17px] lg:text-[15px] md:text-[14px] sm:text-[11px] xl:px-6 xl:py-2 lg:px-5 lg:py-1.5  md:px-3 md:py-1 sm:px-2.5 sm:py-0.5  font-medium rounded-sm transition duration-300 cursor-pointer slide-right font12 bg-green-700 hover:scale-105" onClick={() => projectsRef.current?.scrollIntoView({ behavior: 'smooth' })}
-            > View our Porjects
-            </button>
-          </div>
-        </div>
-      </div>
-      <div ref={projectsRef} className="w-full h-full flex justify-center items-center flex-col space-y-4">
-          <div className='w-full h-[100px] flex items-center justify-center '>
-            <h1 className='font-bold text-[20px] xl:text-[44px] lg:text-[40px] md:text-[38px] sm:text-[32px] text-gray-800'>ONGOING PROJECTS</h1>
-          </div>
-        {ongoingProjects.map((group, index) => (
-          <Projectcard index={index}  companyName={group.company} projects={group.projects} logo={group.logo} key={index}/>
-        ))}
-      </div>
-    </div>
-  );
+        </section>
+    );
 };
 
-export default OngoingProjects;
+export default OngoingProjectsBoard;

@@ -1,40 +1,72 @@
-import React  from 'react'
-import Image from '../../../node_modules/next/image'
+import React, { useState } from "react";
+import Image from "next/image";
+
 interface PromiseCardProps {
   imageurl: string;
   title: string;
   description: string;
 }
 
-const PromiseCard: React.FC<PromiseCardProps> = ({ imageurl, title, description }) => {
-
+const PromiseCard: React.FC<PromiseCardProps> = ({
+  imageurl,
+  title,
+  description,
+}) => {
+  const [hovered, setHovered] = useState(false);
 
   return (
     <div
-      className={`w-[85%] xl:w-3/4 lg:w-[85%] md:w-[85%] sm:w-[85%] h-full  bg-white xl:p-8 lg:p-6 md:p-3 sm:p-8 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105 `}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="group relative w-[85%] xl:w-[70%] mx-auto h-[360px] rounded-3xl overflow-hidden bg-neutral-900 shadow-2xl transition-all duration-500"
     >
-      <div className='w-full h-[40%] flex justify-center items-center '>
-        <div className='w-[80%] h-[90%] relative xl:w-[95%] xl:h-full lg:w-[95%] lg:h-[95%] md:w-[95%] md:h-[95%] sm:w-[100%] sm:h-[100%] flex justify-center items-center rounded-lg overflow-hidden'>
+      {/* Glow */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-transparent" />
+
+      {/* Image Reveal */}
+      <div
+        className={`absolute inset-0 transition-all duration-700 ease-out ${
+          hovered ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+        }`}
+      >
         <Image
           src={imageurl}
-          alt="promise image"
+          alt={title}
           fill
-          className="object-fill"
+          className="object-cover"
         />
-        </div>
+        <div className="absolute inset-0 bg-black/50" />
       </div>
-      <div className='w-full h-[60%] flex flex-col justify-center items-center '>
-        <div className= {` xl:w-full  lg:w-full  md:w-[95%]  sm:w-[100%]  pt-2 space-y-4 xl:space-y-4 lg:space-y-3 md:space-y-2 sm:sapce-y-2 h-[70%] width75`}>
-        <h2 className="h-[24%] text-lg xl:text-[18px] lg:text-[14px] md:text-[12px] sm:text-[12px]    font-semibold text-black text-center leading-[20px] font14 font13">
+
+      {/* Content */}
+      <div className="relative z-10 h-full flex flex-col justify-end p-8 text-white">
+        <h2
+          className={`text-2xl font-semibold leading-tight transition-all duration-500 ${
+            hovered ? "-translate-y-6" : "translate-y-0"
+          }`}
+        >
           {title}
         </h2>
-        <p className="xl:text-[13px] lg:text-[11px] md:text-[10px] sm:text-[10px] text-justify text-gray-600 overflow-hidden font12 font10 leading-[13px] xl:leading-[18px] lg:leading-[15px] md:leading-[14px] sm:leading-[14px] font8 font6">
-          {description}
-        </p>
+
+        <div
+          className={`overflow-hidden transition-all duration-500 ${
+            hovered ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0"
+          }`}
+        >
+          <p className="text-sm text-neutral-300 leading-relaxed">
+            {description}
+          </p>
         </div>
+
+        {/* Accent Line */}
+        <div
+          className={`mt-6 h-[2px] w-10 bg-white transition-all duration-500 ${
+            hovered ? "w-20 opacity-100" : "w-10 opacity-50"
+          }`}
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default PromiseCard;

@@ -14,7 +14,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col gap-y-4">
+    <div className="w-full h-full flex flex-col">
       <HomeCarousel onReadMoreClick={handleReadMoreClick} />
       <div ref={promiseRef}>
         <PromiseSection />

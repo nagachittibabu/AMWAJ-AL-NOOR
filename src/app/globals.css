@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(230, 249, 238);
+  background-color: rgb(255, 250, 245);
 }
 
 * {
@@ -162,6 +162,7 @@ body {
     height: max-content;
     padding-right: 0;
     width: 100%;
+    
   }
   .navbar li a,.more_features,.projects{
     font-size: 12px;
@@ -466,6 +467,11 @@ body {
   background-size: cover;
   background-position: center;  
 }
+#client-section{
+  background-image: url("/images/client-background.png");
+  background-size: cover;
+  background-position: center;  
+}
 
 #about{
   background-image: url("/images/about-us-banner.png");
@@ -478,7 +484,18 @@ body {
   background-size: cover;
   background-position: center;  
 }
+/* header{
+  background-image: url("/images/HOMEBANNER2.png");
+  background-size: cover;
+  background-position: cover; 
+} */
 
+
+#projects{
+  background-image: url("/images/projectSectionBanner.png");
+  background-size: cover;
+  background-position: center; 
+}
 @keyframes loop {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

@@ -3,98 +3,104 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-
 const Footer = () => {
   return (
-    <footer className="w-full  h-max xl:h-[330px] lg:h-[300px] md:h-[280px] sm:h-[470px] ">
-      <div className="w-full h-[500px] xl:h-[280px] lg:h-[250px] md:h-[230px] sm:h-[420px] flex flex-wrap xl:justify-evenly lg:justify-evenly md:justify-center sm:justify-evenly items-center bg-gradient-to-r from-teal-900 to-teal-700 to-gray-600 text-gray-100 xl:p-0 lg:p-0 md:p-0 sm:p-6 p-2  h-max space-x-0 md:space-x-6">
-        <div className="w-1/2 xl:w-1/5 lg:w-1/5 md:w-1/4 sm:w-1/2 h-[60%] xl:h-full lg:h-full md:h-full sm:h-[60%]  flex justify-center items-center width50   footer_section ">
-          <div className="w-[80%] xl:w-3/4 lg:w-full md:w-full sm:w-[80%]  h-full padding-down space-y-2 flex flex-col items-center justify-center">
-            <div className="w-[200px] h-[20%] flex items-center justify-center ">
-              <Link
-                href="/"
-                className="relative w-[40%] h-full sm:w-[40%] sm:h-[100%] md:w-[40%] md:h-[100%] lg:w-[40%] lg:h-[100%] xl:w-[40%] xl:h-[100%]  overflow-hidden rounded"
-              >
-                <Image
-                  src="/images/logo.png"
-                  alt="Company Logo"
-                  fill
-                  className="object-fill"
-                />
-              </Link>
-              <div>
-                <h1 className="w-max h-full font-bold text-[18px] text-green-400 ">WAHAT LIWAN</h1>
-              </div>
-            </div>
-            <ul className="w-full h-[10%] flex items-center justify-center space-x-4 text-[20px] xl:text-[25px] lg:text-[24px] md:text-[23px] sm:text-[22px]">
-              <Link href={""}><li className='bx bxl-instagram' ></li></Link>
-              <Link href={""}><li className='bx bxl-whatsapp' ></li></Link>
-              <Link href={""}><li className='bx bxl-facebook' ></li></Link>
-            </ul>
-            <div className="w-full h-[70%] xl:h-[50%] lg:h-[50%] md:h-[50%] sm:h-[50%]  flex justify-center  items-start  ">
-              <div className="w-full h-[100%]">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d815.61564973858!2d55.3951615!3d25.3666734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5a245db7de29%3A0x3969952e4d8a959b!2sNoor%20Al%20Nabba%20Building!5e1!3m2!1sen!2sin!4v1761215634842!5m2!1sen!2sin" width="100%" height="100%" ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className=" w-1/2 xl:w-1/8 lg:w-1/8 md:w-1/6 sm:w-1/2 h-[40%] xl:h-full lg:h-full md:h-full sm:h-1/2 flex  justify-center items-center width50 footer_section  ">
-          <div className="w-[90%] xl:w-full lg:w-full md:w-full sm:w-[80%]  h-3/4  flex flex-col space-y-5  text-center  padding-down ">
-            <h1 className="font-bold text-white text-[13px] xl:text-[15px] lg:text-[14px] md:text-[13px] sm:text-[14px] textleft">QUICK LINKS</h1>
-            <ul className="flex  flex-col space-y-5 text-gray-100 textleft text-[11px] xl:text-[13px] lg:text-[12px] md:text-[10px] sm:text-[11px] xl:space-y-5 lg:space-y-4 md:space-y-3 sm:space-y-4">
-              < li><a href="" className="hover:underline ">HOME</a></ li>
-              < li><a href="/about-us" className="hover:underline ">ABOUT US</a></ li>
-              < li><a href="/ongoing-projects" className="hover:underline ">PROJECTS</a></ li>
-              < li><a href="/services" className="hover:underline ">SERVICES</a></ li>
-            </ul>
-
-          </div>
-        </div>
-        <div className=" w-1/2 xl:w-1/8 lg:w-1/8 md:w-1/6 sm:w-1/2 h-1/2 xl:h-full lg:h-full md:h-full sm:h-1/2 flex  justify-center items-start xl:items-center lg:items-center md:items-center sm:items-start width50 footer_section  ">
-          <div className="w-[90%] xl:w-full lg:w-full md:w-full sm:w-[80%]  h-3/4  flex flex-col space-y-5  text-center  padding-down ">
-            <h3 className="font-bold text-white text-[13px] xl:text-[15px] lg:text-[14px] md:text-[13px] sm:text-[14px] textleft">SPECIALIZATION IN</h3>
-            <ul className="flex  flex-col space-y-5 text-gray-100 textleft text-[11px] xl:text-[13px] lg:text-[12px] md:text-[10px] sm:text-[11px] xl:space-y-5 lg:space-y-4 md:space-y-3 sm:space-y-4 ">
-              <li><a href="/services"   className="hover:underline">MECHANICAL</a></li>
-              <li><a href="/services"  className="hover:underline">PLUMBING</a></li>
-              <li><a href="/services"   className="hover:underline">ELECTRICAL</a></li>
-              < li><a href="/groups" className="hover:underline ">GROUPS</a></ li>
-
-            </ul>
-          </div>
-        </div>
-        <div className="w-1/2 xl:w-1/5 lg:w-1/5 md:w-[30%] sm:w-1/2  h-1/2 xl:h-full lg:h-full md:h-full sm:h-1/2 flex flex-col justify-center items-center xl:items-center lg:items-center md:items-center sm:items-center  footer_section ">
-          <div className="w-[90%] xl:w-3/4 lg:w-full md:w-full sm:w-[80%] h-full xl:h-3/4 lg:h-3/4 md:h-3/4 sm:h-full flex flex-col space-y-2  text-center  padding-down text-left">
-            <h3 className="font-bold text-white text-[13px] xl:text-[15px] lg:text-[14px] md:text-[13px] sm:text-[14px] textleft">CONTACT US</h3>
-
-            <div>
-              <h4 className="font-semibold text-[14px]  "><i className='pr-2 bx bx-current-location'></i>We Are Here</h4>
-              <p className="text-[11px]">P.O BOX:67411,Dubai - United Arab Emirates</p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-[14px]"><i className='pr-2 bx bxs-phone-call' ></i>CALL US</h4>
-              <div className="flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row text-[11px]">
-                <a href="tel:+97165217424" className="hover:underline block ">+97165217424,</a>
-              </div>
-            </div>
-            <div >
-              <h4 className="font-semibold text-[14px]"><i className='pr-2 bx bxs-envelope' ></i>MAIL US</h4>
-              <div className="flex flex-col xl:flex-row lg:flex-row md:flex-row sm:flex-row text-[11px]">
-                <a href="mailto:info@wahatliwan.com" className="hover:underline block ">info@wahatliwan.com,</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <footer className="w-full h-full bg-gradient-to-br from-orange-600 via-orange-400 to-red-500 text-white py-16">
+      
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full "></div>
       </div>
-      <div className="w-full h-[50px] bg-gray-400 flex justify-around  items-center xl:text-[15px] lg:text-[14px] md:text-[13px] sm:text-[14px] textleft font-semibold text-[9px]">
-        <p className="text-center font-bold">&copy;copyright2025</p>
-        <p>Developed by G.Naga Chittibabu, J.Savya & P.Veeraswamy</p>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <div className="lg:col-span-3 space-y-8">
+            <Link href="/" className="block group">
+              <div className="bg-white/95 backdrop-blur-md p-4 rounded-2xl w-fit shadow-xl group-hover:scale-105 transition-all duration-300">
+                <Image src="/images/fullLogo.jpeg" alt="Company Logo" width={160} height={50} className="object-contain" />
+              </div>
+            </Link>
+            <p className="text-white/90 text-sm leading-relaxed font-medium drop-shadow-sm">
+              Engineering sustainable solutions for the modern world. Specializing in Mechanical, Electrical, and Plumbing excellence across the UAE landscape.
+            </p>
+            <div className="flex gap-3">
+              {['instagram', 'whatsapp', 'facebook-circle'].map((icon) => (
+                <Link key={icon} href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white hover:text-orange-600 transition-all text-xl shadow-lg">
+                  <i className={`bx bxl-${icon}`}></i>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="lg:col-span-4 grid grid-cols-2 gap-4">
+            <div>
+              <h3 className="text-white font-black text-sm uppercase tracking-[0.2em] mb-6 border-b-2 border-white/20 pb-2 w-fit">Expertise</h3>
+              <ul className="space-y-3 text-sm font-bold">
+                <li><Link href="/services" className="text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all">MECHANICAL</Link></li>
+                <li><Link href="/services" className="text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all">ELECTRICAL</Link></li>
+                <li><Link href="/services" className="text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all">PLUMBING</Link></li>
+                <li><Link href="/groups" className="text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all">GROUPS</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-white font-black text-sm uppercase tracking-[0.2em] mb-6 border-b-2 border-white/20 pb-2 w-fit">Explore</h3>
+              <ul className="space-y-3 text-sm font-bold">
+                <li><Link href="/" className="text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all">HOME</Link></li>
+                <li><Link href="/about-us" className="text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all">ABOUT US</Link></li>
+                <li><Link href="/projects" className="text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all">PROJECTS</Link></li>
+                <li><Link href="/contact" className="text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all">CONTACT</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5">
+            <div className="bg-black/10 backdrop-blur-lg border border-white/20 p-6 rounded-[2.5rem] shadow-2xl">
+              
+              <div className="h-32 w-full rounded-[1.8rem] overflow-hidden mb-6 border border-white/30">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d815.61564973858!2d55.3951615!3d25.3666734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5a245db7de29%3A0x3969952e4d8a959b!2sNoor%20Al%20Nabba%20Building!5e1!3m2!1sen!2sin!4v1761215634842!5m2!1sen!2sin" 
+                  className="w-full h-full brightness-90 contrast-125"
+                  style={{ border: 0 }}
+                ></iframe>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <h4 className="text-[11px] text-yellow-200 font-black uppercase tracking-widest">Phone Support</h4>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+97165217424" className="text-[13px] font-bold text-white hover:text-yellow-200 transition-colors">+971 6 521 7424</a>
+                    <a href="tel:+971500000000" className="text-[13px] font-bold text-white hover:text-yellow-200 transition-colors">+971 50 000 0000</a>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="text-[11px] text-yellow-200 font-black uppercase tracking-widest">Email Inquiry</h4>
+                  <div className="flex flex-col gap-1">
+                    <a href="mailto:info@amwajalnoor.in" className="text-[13px] font-bold text-white/90 hover:text-yellow-200 truncate transition-colors">info@amwajalnoor.in</a>
+                    <a href="mailto:amwajalnoor@gmail.com" className="text-[13px] font-bold text-white/90 hover:text-yellow-200 truncate transition-colors">amwajalnoor@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-white/20 flex items-center gap-3">
+                <i className='bx bxs-map-pin text-yellow-300 text-lg animate-bounce'></i>
+                <p className="text-[11px] text-white font-black tracking-tight uppercase">P.O BOX: 67411, Dubai - UAE</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-[12px] font-black text-white/70 tracking-[0.4em] uppercase">
+            © 2026 Amwaj Al Noor Tech LLC
+          </p>
+          <div className="text-[12px] text-white/80 font-bold px-4 py-2 bg-black/10 rounded-full backdrop-blur-sm">
+            BUILT BY • NAGA • SAVYA • VEERASWAMY
+          </div>
+        </div>
       </div>
     </footer>
-  )
-}
-export default Footer
+  );
+};
 
-
-
-
+export default Footer;

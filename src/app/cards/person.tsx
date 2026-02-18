@@ -1,25 +1,53 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
+
 interface PersonCardProps {
-  imageurl: string
-  name: string
-  specialization: string
+  imageurl: string;
+  name: string;
+  specialization: string;
 }
-const Person: React.FC<PersonCardProps> = ({ imageurl, name, specialization }) => {
+
+const Person: React.FC<PersonCardProps> = ({
+  imageurl,
+  name,
+  specialization,
+}) => {
   return (
-    <div className='w-full h-full flex flex-col  rounded-lg shadow-lg bg-gray-50 items-center justify-center person_card '>
-      <div className='w-[40%] h-[90%] xl:w-full xl:h-[80%] lg:w-full lg:h-[80%] md:w-full md:h-[80%] sm:w-[90%] sm:h-[90%] flex justify-center items-center'>
-        <div className='w-[90%] h-[85%] xl:w-[80%] xl:h-[90%] lg:w-[80%] lg:h-[90%] md:w-[80%] md:h-[90%] sm:w-[90%]
-        sm:h-[90%] flex items-center justify-center relative rounded-lg overflow-hidden'>
-          <Image src={imageurl} alt="person image" fill className='object-fit' />
+    <div
+      className="group relative w-full max-w-sm rounded-2xl p-[3px]
+      bg-gradient-to-br from-red-500 via-orange-500 to-yellow-400
+      transition-all duration-300
+      hover:scale-[1.04]
+      hover:shadow-[0_20px_50px_rgba(255,120,0,0.45)] "
+    >
+      <div className="bg-neutral-950 rounded-2xl overflow-hidden">
+                <div className="relative w-full h-[320px]">
+          <Image
+            src={imageurl}
+            alt={name}
+            fill
+            priority
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        </div>
+
+        <div className="px-6 py-5 text-center">
+          <h1 className="text-xl font-bold tracking-wide text-white">
+            {name}
+          </h1>
+
+          <p className="mt-1 text-sm text-orange-300">
+            {specialization}
+          </p>
+
+          <div className="mt-4 mx-auto h-[3px] w-16 rounded-full
+            bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400" />
         </div>
       </div>
-      <div className='w-[60%] h-[60%] xl:h-[20%] lg:h-[20%] md:h-[20%] sm:h-[20%]  flex flex-col  items-center justify-center '>
-        <h1 className='text-[18px] font-bold text-center font14'>{name}</h1>
-        <h2 className='text-[13px] text-center font10'>{specialization}</h2>
-      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Person;

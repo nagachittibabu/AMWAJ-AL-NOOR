@@ -18,15 +18,17 @@ const PromiseSection = () => {
 
   return (
     <section
-      id="promises"
-      className="w-full flex flex-col items-center justify-center gap-2 bg-cover bg-center py-12 bg-white"
+      id="promise-section"
+      className="w-full flex flex-col items-center justify-center  bg-cover bg-center bg-white"
     >
+      <div className="w-full h-full ">
       <h1
         data-aos="zoom-in"
-        className="text-xl sm:text-2xl xl:text-4xl  lg:text-3xl md:text-[3xl]  font-bold text-center text-black pb-12"
+        className=" text-xl sm:text-2xl xl:text-4xl  lg:text-3xl md:text-[3xl]  font-bold text-center text-black pb-12"
       >
-        Our Promise as a contractor is to build your project
+        Our Promise
       </h1>
+      </div>
 
       <div
         data-aos="fade-up"
