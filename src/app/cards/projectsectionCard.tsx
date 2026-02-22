@@ -16,7 +16,7 @@ const ProjectsectionCard: React.FC<ProjectsectionCardProps> = ({
   banner,
 }) => {
   return (
-    <div className="group w-[90%] xl:w-[65%]  h-[420px] border border-12 border-yellow-200 flex flex-col rounded-2xl overflow-hidden shadow-2xl relative shadow-3xl shadow-yellow-600">
+    <div className="group w-[90%] xl:w-[65%]  h-[420px] borde  flex flex-col rounded-2xl overflow-hidden shadow-2xl relative shadow-3xl shadow-yellow-600  ">
 
       {/* Image Section */}
       <div className="w-full h-[60%] flex items-center justify-center">
@@ -31,7 +31,7 @@ const ProjectsectionCard: React.FC<ProjectsectionCardProps> = ({
         </div>
       </div>
       {/* Content Section */}``
-      <div className="w-full h-[50%]  z-10 flex flex-col justify-between bg-orange-500 text-white border absolute top-[50%] left-0 rounded-t-[50%]">
+      <div className="w-full h-[50%] z-10 flex flex-col justify-between bg-gradient-to-r from-orange-500 to-orange-800 text-white absolute top-[50%] left-0 rounded-t-[35%]">
 
         {/* Top */}
         <div className="w-fulll h-full ">

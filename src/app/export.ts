@@ -111,17 +111,17 @@ export const contact = [
 
 export const Persons = [
     {
-        "imageurl": "/teamMembers/companybanner.png",
+        "imageurl": "/images/person.png",
         "name": "R.Rakesh",
         "specialization": "B.tech(Civil),M.tech(structure)"
     },
     {
-        "imageurl": "/teamMembers/companybanner.png",
+        "imageurl": "/images/person.png",
         "name": "M.Nagesh ",
         "specialization": "B.tech(Electrical),M.Tech(power Systems)"
     },
     {
-        "imageurl": "/teamMembers/companybanner.png",
+        "imageurl": "/images/person.png",
         "name": "E.Sharma",
         "specialization": "B.tech(Mechanical),M.tech(Thermel Engineering)"
     }
@@ -183,13 +183,16 @@ export const services: Service[] = [
 
 export const about = [
     {
-        "title": "Introduction Of Wahat Liwan Tech Services LLC ",
-        "image": "/about.png",
-        "para1": "Wahat Liwan Tech Services LLC  is established in 2015 at Sharjah, United Arab Emirates. Company is one of the leading MEP & Civil Contracting company in the region with a wide reputation and excellence.",
-        "para2": "Timeliness, efficiency, and value-per-square-foot are the focus of WAHAT LIWAN TECH SERVICES LLC’s efforts, and we pride ourselves on offering the highest levels of service and attention to detail, keeping you updated with regular progress reports every step of the way, thereby ensuring that your project is completed on time and within budget., and value-per-square-foot are the focus of B",
-        "para3": "To provide innovative and world class solutions through the best people, processes and systems with a commitment to partnership and exceptional services and we pride on offer your project is completed on time and within budget."
+      title: "Introduction to ANWAJ AL NOOR",
+      image: "/about.png",
+      para1:
+        "ANWAJ AL NOOR was established in 2015 in Sharjah, United Arab Emirates. The company has grown into a trusted provider of MEP and civil contracting services, recognized for its professionalism, technical capability, and commitment to quality.",
+      para2:
+        "Our focus is on timely delivery, operational efficiency, and value-driven execution. At ANWAJ AL NOOR, we maintain strict quality control standards while keeping clients informed through structured progress updates, ensuring every project is completed on schedule and within budget.",
+      para3:
+        "We are committed to delivering innovative, reliable, and world-class solutions through skilled professionals, proven processes, and modern systems. Our approach is built on long-term partnerships, transparency, and exceptional service at every stage of the project lifecycle."
     }
-]
+  ];
 
 export const commitment = [
     {

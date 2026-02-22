@@ -21,7 +21,7 @@ const Person: React.FC<PersonCardProps> = ({
       hover:shadow-[0_20px_50px_rgba(255,120,0,0.45)] "
     >
       <div className="bg-neutral-950 rounded-2xl overflow-hidden">
-                <div className="relative w-full h-[320px]">
+        <div className="relative w-full h-[320px]">
           <Image
             src={imageurl}
             alt={name}

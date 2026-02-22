@@ -19,7 +19,7 @@ const PromiseSection = () => {
   return (
     <section
       id="promise-section"
-      className="w-full flex flex-col items-center justify-center  bg-cover bg-center bg-white"
+      className="w-full flex flex-col items-center justify-center  bg-cover bg-center "
     >
       <div className="w-full h-full ">
       <h1

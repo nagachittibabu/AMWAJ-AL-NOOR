@@ -3,21 +3,19 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { corevalues } from "../export";
+import Image from "next/image";
 
 const CoreValueSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="w-full bg-slate-950 py-24 text-white overflow-hidden">
+    <section className="w-full py-24 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
         <div className="mb-16">
-          <h2 className="text-sm font-bold tracking-widest text-blue-500 uppercase">
-            Our DNA
-          </h2>
-          <h3 className="text-4xl md:text-6xl font-light mt-4">
-            The principles that <span className="font-serif italic text-blue-200">drive us.</span>
+          <h3 className="text-4xl md:text-6xl font-demibold mt-4 text-black ">
+            The principles that <span className="font-semibold italic bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 bg-clip-text text-transparent">Drive Us.</span>
           </h3>
         </div>
 
@@ -32,14 +30,14 @@ const CoreValueSection = () => {
                 className="group relative text-left py-4 border-b border-white/10 outline-none"
               >
                 <span className={`text-xl transition-all duration-300 ${
-                  activeIndex === index ? "text-blue-400 pl-4" : "text-gray-500 hover:text-white"
+                  activeIndex === index ? "text-orange-400 pl-4" : "text-gray-500 hover:text-red-300"
                 }`}>
                   {item.title}
                 </span>
                 {activeIndex === index && (
                   <motion.div 
                     layoutId="active-pill"
-                    className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-blue-500 rounded-full"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-orange-500 rounded-full"
                   />
                 )}
               </button>
@@ -58,21 +56,24 @@ const CoreValueSection = () => {
                 className="flex flex-col md:flex-row gap-8 items-center"
               >
                 <div className="flex-1">
-                  <h4 className="text-3xl font-bold mb-6 text-blue-100">
+                  <h4 className="text-3xl font-bold mb-6 text-red-400">
                     {corevalues[activeIndex].title}
                   </h4>
-                  <p className="text-lg text-gray-400 leading-relaxed">
+                  <p className="text-lg text-gray-900 leading-relaxed">
                     {corevalues[activeIndex].about}
                   </p>
                 </div>
                 
                 {/* Visual Placeholder for the CoreValue image */}
-                <div className="w-full md:w-1/2 aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
-                    <img 
+                <div className="w-full md:w-1/2 aspect-square relative overflow-hidden rounded-2xl shadow-2xl flex items-center justify-center">
+                  <div className="w-3/4 h-3/4 relative overflow-hidden">
+                    <Image
                       src={corevalues[activeIndex].image} 
                       alt={corevalues[activeIndex].title}
-                      className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                      fill
+                      className="object-contain w-3/4 h-3/4 transition-all duration-700"
                     />
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>

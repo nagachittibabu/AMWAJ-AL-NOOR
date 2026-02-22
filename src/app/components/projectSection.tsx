@@ -25,9 +25,9 @@ const ProjectSection = () => {
       <div className="w-[95%] flex flex-col items-center justify-center bg-cover bg-center h-max py-5 space-y-18 py-12">
       
         <h1
-          className="text-2xl sm:text-2xl lg:text-4xl md:text-[3xl] text-black text-center font-bold "
+          className="text-2xl sm:text-2xl lg:text-4xl md:text-[3xl] text-black text-center font-bold tracking-wide"
         >
-          We Are Specialized In Projects
+         Projects Built with <span className="italic bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 bg-clip-text text-transparent">Expertise</span>
         </h1>
 
         <div

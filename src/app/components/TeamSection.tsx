@@ -16,8 +16,8 @@ const TeamSection = () => {
         });
       }, []);
     return (
-        <div className='w-full h-[800px] xl:h-[700px] lg:h-[690px] md:h-[980px] sm:h-[980px] flex justify-center items-center '>
-            <div className='w-[95%] h-[90%]  rounded-lg shadow-lg flex flex-col space-y-6 justify-center bg-white'>
+        <div className='w-full h-[800px] xl:h-[700px] lg:h-[690px] md:h-[980px] sm:h-[980px] flex justify-center items-center'>
+            <div className='w-[95%] h-[90%] flex flex-col space-y-12 justify-center'>
                 <div className='w-full'>
                     <h1 className='text-center text-xl sm:text-2xl lg:text-4xl md:text-[3xl] font-bold font14'>Our Professional Team</h1>
                 </div>
