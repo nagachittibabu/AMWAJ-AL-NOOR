@@ -16,19 +16,21 @@ const banners = [
 const HomeCarousel = ({ onReadMoreClick }: HomeCarouselProps) => {
 
   return (
-    <div className='w-full h-[620px] text-white flex items-center justify-center'>
-      <div className='w-full h-full relative flex items-center justify-center'>
+    <div className='homeCarousel w-full h-[620px] text-white flex items-center justify-center relative'>
+      <div className='w-full h-full  flex items-center justify-center'>
         <div className='w-2/3 h-[90%] flex items-center justify-center'>
           <Image src={"/images/client-background.png"} alt="logo" fill className='object-fill' />
         </div>
-        <div className="absolute top-10 left-0 w-[55%] h-[650px]">
-          <div className='w-full h-full '>
-            <Image src={"/images/companyLogo3.png"} alt="logo" fill className='object-cover' />
+        <div className='absolute w-full h-[600px]  flex items-center justify-between'>
+          <div className="w-[55%] h-full  absolute bottom-0 top-10">
+            <div className=' w-3/4 h-[90%] xl:w-3/4 xl:h-[90%] lg:w-1/2 lg:h-[90%] md:w-1/2 md:h-[90%]'>
+              <Image src={"/images/companyLogo3.png"} alt="logo" fill className='object-cover' />
+            </div>
           </div>
-        </div>
-        <div className="absolute top right-0 w-[55%] h-[600px]">
-          <div className='w-full h-full '>
-            <Image src={"/images/home-persons.png"} alt="logo" fill className='object-cover' />
+          <div className=" w-[65%] h-full absolute  top-2 right-0">
+            <div className='w-[55%] h-full '>
+              <Image src={"/images/homeperson.png"} alt="logo" fill className='object-cover' />
+            </div>
           </div>
         </div>
       </div>

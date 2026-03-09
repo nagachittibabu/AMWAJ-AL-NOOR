@@ -10,6 +10,18 @@ body {
   background-color: rgb(255, 250, 245);
 }
 
+
+header{
+  z-index: 999 !important;
+}
+
+.navbar li-p9{
+  z-index: 999 !important;
+}
+
+.homeCarousel{
+  z-index: 100 !important;
+}
 * {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

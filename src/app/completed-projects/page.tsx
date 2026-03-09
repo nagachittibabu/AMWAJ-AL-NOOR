@@ -62,18 +62,10 @@ const CompleteProjects: React.FC = () => {
                                     <h3 className="text-lg font-semibold">
                                         {group.company}
                                     </h3>
-                                    {/* <p className="text-sm text-gray-400">
-                                        {group.projects.length} active projects
-                                    </p> */}
                                 </div>
-
-                                <span className="text-sm text-blue-400">
-                                    {activeCompany === index ? 'Hide' : 'View'}
-                                </span>
                             </button>
 
                             {/* PROJECT LIST */}
-                            {activeCompany === index && (
                                 <div className="flex px-2 pb-12 space-y-4">
                                     <Projectcard
                                         index={index}
@@ -82,7 +74,6 @@ const CompleteProjects: React.FC = () => {
                                         logo={group.logo}
                                     />
                                 </div>
-                            )}
                         </div>
                     ))}
                 </div>

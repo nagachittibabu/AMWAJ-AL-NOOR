@@ -1,93 +1,103 @@
 export const ourpromises = [
     {
-        'image': '/images/promise1.jpeg',
-        'title': 'Our Promise as a contractor is to build your project',
-        'description': 'The process of commercial building construction involves designing, planning, and constructing buildings intended for commercial use.These structures serve various purposes, such as retail stores, office buildings and educational institutions.',
-    },
-    {
-        'image': '/images/promise2.jpeg',
-        'title': 'Proper safety induction Maintenances',
-        'description': 'Our certified electricians ensure seamless integration of power systems, lighting, and control panels. From conduit routing to final testing, we deliver safe, efficient, and regulation-compliant electrical solutions for residential, commercial, and industrial spaces.',
-    },
-    {
-        'image': '/images/manpower.png',
-        'title': 'Reliable Workforce, On-Demand',
-        'description': 'We supply trained technicians, electricians, and ducting experts for short-term and long-term projects. Our manpower solutions are flexible, scalable, and backed by technical supervision to meet your project timelines.',
-    },
+        image: "/images/promise1.jpeg",
+        title: "Our Promise as a Contractor",
+        description:
+          "At Amwaj Al Noor Technical Services LLC, our promise is to deliver high-quality workmanship and dependable technical manpower for every project. We support commercial, residential, and industrial developments by providing skilled professionals who ensure projects are completed safely, efficiently, and on time."
+      },
+      {
+        image: "/images/safetypromise.png",
+        title: "Safety & Professional Standards",
+        description:
+          "Safety is a top priority at Amwaj Al Noor Technical Services LLC. Our technicians and electricians undergo proper safety induction and follow industry-approved procedures on every site. From installation to maintenance, we ensure all electrical systems meet regulatory standards while maintaining a safe working environment."
+      },
+      {
+        image: "/images/manpower.png",
+        title: "Reliable Workforce, On-Demand",
+        description:
+          "Amwaj Al Noor Technical Services LLC provides skilled electricians, ducting technicians, plumbers, and mechanical specialists for projects of any size. Our manpower solutions are flexible, scalable, and supported by experienced supervisors to ensure smooth execution and timely project delivery."
+      }
 ]
 
 export const corevalues = [
     {
-        'image': '/images/mission.png',
-        'title': 'Our Mission',
-        'about': 'Our mission is to deliver reliable, cost-effective, and high-quality technical manpower for electrical and HVAC projects. Backed by skilled engineers, certified technicians, and a commitment to safety and precision.'
-    },
-    {
-        'image': '/images/house.png',
-        'title': 'Electrical & Plumbing Services',
-        'about': 'We specialize in supplying expert electricians and ducting technicians for infrastructure projects. From cable tray installations to GI duct fabrication and DB dressing, our workforce powers the systems that keep buildings functional and efficient',
-        'points': [
-            "Foster a professional and ethical work environment.",
-            "Set safety and quality as our top priorities.",
-            "Encourage creativity and innovation in every aspect of our work.",
-            "Recognize the value of continuous improvement.",
-            "Be open, listen to our customers, and adapt to change."
+        image: "/images/mission.png",
+        title: "Our Mission",
+        about:
+          "Our mission at Amwaj Al Noor Technical Services LLC is to provide reliable, cost-effective, and high-quality technical manpower for construction, electrical, and HVAC projects. With experienced engineers and skilled technicians, we are committed to delivering excellence, safety, and efficiency in every project we support."
+      },
+      {
+        image: "/images/house.png",
+        title: "Electrical & Plumbing Services",
+        about:
+          "Amwaj Al Noor Technical Services LLC specializes in supplying qualified electricians, plumbers, and ducting technicians for residential, commercial, and industrial projects. From cable tray installations and DB dressing to GI duct fabrication and plumbing systems, our workforce ensures that every project operates safely and efficiently.",
+        points: [
+          "Deliver skilled and certified technical manpower.",
+          "Maintain the highest safety and quality standards.",
+          "Support infrastructure and construction projects with reliability.",
+          "Focus on efficiency, precision, and timely project completion.",
+          "Build long-term relationships through trust and professionalism."
         ]
-    },
-    {
-        'image': '/images/experience.jpeg',
-        'title': 'Experience',
-        'about': 'With over 10 years of hands-on experience in manpower deployment, electrical installations, and ducting works, we’ve supported major developments across the UAE and India. Our team is trained, certified, and ready to meet the demands of any scale'
-    },
-    {
-        'image': '/images/safety.png',
-        'title': 'Safety',
-        'about': 'At Wahat Liwan Technical Services LLC, safety isn’t a checkbox—it’s our foundation. We follow strict protocols and industry standards to ensure zero incidents across all projects. “Safety First” is embedded in our culture, from field technicians to senior engineers.'
-    },
-
+      },
+      {
+        image: "/images/experience.jpeg",
+        title: "Experience",
+        about:
+          "With more than 10 years of industry experience, Amwaj Al Noor Technical Services LLC has successfully provided technical manpower for electrical installations, ducting works, and mechanical services. Our team has supported major construction and infrastructure projects across the region with professionalism and technical expertise."
+      },
+      {
+        image: "/images/safety.png",
+        title: "Safety",
+        about:
+          "At Amwaj Al Noor Technical Services LLC, safety is our top priority. We strictly follow international safety standards and industry best practices to ensure a secure working environment for our team and clients. From on-site technicians to project supervisors, 'Safety First' is a core value embedded in everything we do."
+      }
 ]
 
 export const groups=["/groups/group1.jpeg","/groups/group2.jpeg","/groups/group3.jpeg","/groups/group4.jpeg","/groups/group5.jpeg","/groups/group6.jpeg"]
 
 export const projects = [
     {
-        'image': '/images/commercial-building.png',
-        'banner': '/images/commercialbanner.png',
-        'title': 'Commercial',
-        'about': 'We support commercial projects with skilled electricians and ducting technicians for retail spaces, office buildings. '
-
-    },
-    {
-        'image': '/images/residential.png',
-        'banner': '/images/companybanner.png',
-        'title': 'Residential',
-        'about': 'From apartments to villas, we provide certified manpower for electrical wiring, DB dressing, and ducting solutions. .'
-    },
-    {
-        'image': '/images/industrial.png',
-        'banner': '/images/industrailbanner.png',
-        'title': 'Industrial',
-        'about': 'Industrial sites demand precision and durability. We supply trained professionals for every    installations,'
-    },
-    {
-        'image': '/images/educational.png',
-        'banner': '/images/educationalbanner.png',
-        'title': 'Educational',
-        'about': 'We provide skilled manpower for electrical and ducting installations in schools, colleges, and universities.'
-
-    },
-    {
-        'image': '/images/hospital.png',
-        'banner': '/images/hospitalitybannner.png',
-        'title': 'Hospitality',
-        'about': ' Our team delivers expert ducting and electrical services that support guest comfort, operational efficiency, and safety.'
-    },
-    {
-        'image': '/images/medical.png',
-        'banner': '/images/hospitalbanner.png',
-        'title': 'Medical',
-        'about': ' We supply certified electricians and ducting specialists for hospitals and clinics, ensuring uninterrupted power, and clean airflow'
-    }
+        image: "/images/commercial-building.png",
+        banner: "/images/commercialbanner.png",
+        title: "Commercial",
+        about:
+          "Amwaj Al Noor Technical Services LLC provides skilled electricians and ducting technicians for commercial buildings such as offices and retail spaces."
+      },
+      {
+        image: "/images/residential.png",
+        banner: "/images/residentialbanner.png",
+        title: "Residential",
+        about:
+          "We supply certified manpower for residential projects including apartments and villas, handling electrical wiring and ducting installations."
+      },
+      {
+        image: "/images/industrial.png",
+        banner: "/images/industrialbanner.png",
+        title: "Industrial",
+        about:
+          "Our trained technicians support industrial facilities with reliable electrical installations and ducting systems."
+      },
+      {
+        image: "/images/educational.png",
+        banner: "/images/educationalbanner.png",
+        title: "Educational",
+        about:
+          "We provide skilled technicians for electrical and ducting works in schools, colleges, and educational institutions."
+      },
+      {
+        image: "/images/hospital.png",
+        banner: "/images/hotelbanner.png",
+        title: "Hospitality",
+        about:
+          "Our team delivers professional electrical and ducting services for hotels and hospitality facilities."
+      },
+      {
+        image: "/images/medical.png",
+        banner: "/images/hospitalbanner.png",
+        title: "Medical",
+        about:
+          "We supply certified electricians and ducting specialists for hospitals and healthcare facilities."
+      }
 ]
 
 export const contact = [
@@ -129,7 +139,6 @@ export const Persons = [
 
 export interface Service {
     title: string;
-    about: string;
     image: string;
     points: string[];
 }
@@ -137,8 +146,7 @@ export interface Service {
 export const services: Service[] = [
     {
         title: "Mechanical",
-        about: "Specialization",
-        image: "/mechanic.png",
+        image: "/services/mechanicalservice.png",
         points: [
             "Heating, Ventilation & Air Conditioning (HVAC) System",
             "All type of Air Conditioning System (Centralized, Wall-Mounted, Split System, CC, Ducted)",
@@ -151,8 +159,7 @@ export const services: Service[] = [
     },
     {
         title: "Plumbing",
-        about: "Specialization",
-        image: "/plumbing.png",
+        image: "/services/plumbingservice.png",
         points: [
             "Design & Installation of plumbing, drainage and sanitary systems",
             "Pump & Tank Installation",
@@ -166,8 +173,7 @@ export const services: Service[] = [
     },
     {
         title: "Electrical",
-        about: "Specialization",
-        image: "/electrical.png",
+        image: "/services/electricalservice.png",
         points: [
             "Electrical Engineering (Design & Product Selection)",
             "Installations of Electrical Panel Systems like MDBs,Panels, SMDBs, DBs / Capacitor Banks",

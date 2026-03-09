@@ -18,7 +18,7 @@ const Person: React.FC<PersonCardProps> = ({
       bg-gradient-to-br from-red-500 via-orange-500 to-yellow-400
       transition-all duration-300
       hover:scale-[1.04]
-      hover:shadow-[0_20px_50px_rgba(255,120,0,0.45)] "
+      hover:shadow-[0_20px_50px_rgba(255,120,0,0.45)] h-[320px] "
     >
       <div className="bg-neutral-950 rounded-2xl overflow-hidden">
         <div className="relative w-full h-[320px]">
@@ -27,7 +27,7 @@ const Person: React.FC<PersonCardProps> = ({
             alt={name}
             fill
             priority
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            className="object-fit transition-transform duration-500 group-hover:scale-110"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />

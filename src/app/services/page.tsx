@@ -9,9 +9,7 @@ const ServicesPage: React.FC = () => {
 
   return (
     <section id="services" className="w-full bg-gray-100 py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-
-        {/* HEADER */}
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-orange-200 mb-4 ">
             Explore Our Services
@@ -20,8 +18,6 @@ const ServicesPage: React.FC = () => {
             Click on a service to see full details and visuals.
           </p>
         </div>
-
-        {/* ACCORDION */}
         <div className="space-y-6">
           {services.map((item, index) => {
             const isOpen = activeIndex === index;
@@ -44,45 +40,33 @@ const ServicesPage: React.FC = () => {
                       {item.title}
                     </h2>
                   </div>
-                  <span
-                    className={`text-3xl font-bold transition-transform cursor-pointer ${
-                      isOpen ? 'rotate-45' : ''
-                    }`}
-                  >
-                    +
-                  </span>
                 </button>
-
-                {/* CONTENT */}
-                {isOpen && (
-                  <div className="border-t px-6 pb-6 pt-4 space-y-6 transform duration-1000 ">
-                    <p className="text-gray-700 text-lg">
-                      {item.about}
-                    </p>
-
-                    <div className="relative w-full h-[260px] rounded-xl overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {item.points.map((point, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start space-x-3 text-gray-700"
-                        >
-                          <span className="text-blue-600 font-bold">✔</span>
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div className="border-t px-6 pb-6 pt-4 space-y-6 transform duration-1000 ">
+                  <div className="relative w-full overflow-hidden rounded-xl 
+                aspect-[16/9] 
+                sm:aspect-[16/7] 
+                md:aspect-[4/1] 
+                lg:aspect-[3/1]">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover w-full"
+                      sizes="100vw"
+                    />
                   </div>
-                )}
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {item.points.map((point, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start space-x-3 text-gray-700"
+                      >
+                        <span className="text-blue-600 font-bold">✔</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             );
           })}
